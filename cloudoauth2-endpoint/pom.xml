@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.github.cloudoauth2</groupId>
+		<artifactId>cloudoauth2</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>cloudoauth2-endpoint</artifactId>
+	<description>认证中心端点</description>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>cloudoauth2-endpoint-common</module>
+		<module>cloudoauth2-endpoint-client</module>
+		<module>cloudoauth2-endpoint-server</module>
+	</modules>
+</project>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.cloudoauth2</groupId>
+		<artifactId>cloudoauth2-endpoint</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>cloudoauth2-endpoint-client</artifactId>
+	<packaging>jar</packaging>
+	<description>微服务认证中心端点-Client端</description>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>cloudoauth2-endpoint-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-oauth2</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-oauth2-jose</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.github.cloudoauth2.endpoint.client.ClientApplication</mainClass>
+					<layout>ZIP</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中 -->
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,17 @@
+server:
+  port: 9091
+  servlet: 
+    context-path: /oauth-client
+    session:
+      cookie:
+        name: jession-client  
+        max-age: 3000
+spring:
+  profiles:
+    active:
+    - dev
+  aop:
+     proxy-target-class: false
+     auto: false
+logging: 
+  config: classpath:logback.xml

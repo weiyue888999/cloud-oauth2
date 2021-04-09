@@ -1,0 +1,15 @@
+security:
+  oauth2: 
+   sso:
+     login-path: /index
+   client: 
+    auto-approve-scopes: app
+    client-id: demo2
+    client-secret: 123456
+    registered-redirect-uri: 
+       /index
+    authorized-grant-types: authorization_code
+    user-authorization-uri: http://10.71.33.158:9090/oauth/authorize
+    access-token-uri: http://10.71.33.158:9090/oauth/token
+   resource:
+     token-info-uri: http://10.71.33.158:9090/oauth/check_token

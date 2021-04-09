@@ -1,0 +1,32 @@
+server:
+  port: 9090
+  servlet:
+    session:
+      cookie:
+        name: oauth-server
+        max-age: 3000
+logging: 
+  config: classpath:logback.xml
+spring:
+  security:
+    filter:
+      order: 3
+  freemarker:
+    cache: false
+    charset: UTF-8
+    suffix: .ftl
+    content-type: text/html; charset=utf-8
+    template-loader-path: classpath:/templates
+    request-context-attribute: request
+  mvc: 
+    throw-exception-if-no-handler-found: true
+    favicon:
+      enabled: false
+    servlet:
+      load-on-startup: 1
+    static-path-pattern: /static/**
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:oracle:thin:@10.71.19.135:1521:orcl
+    username: ZFSOFT_CLOUD_AUTH
+    password: ZFSOFT_CLOUD_AUTH
